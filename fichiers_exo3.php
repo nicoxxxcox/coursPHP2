@@ -61,7 +61,9 @@ des  internautes  par  mois  sur  le  site  depuis  le  mois
 
     $moyenne = array_sum($tableau)/count($tableau);
 
-    $message = $moyenne
+    $message = $moyenne;
+
+    fclose($file);
 ?>
 
 

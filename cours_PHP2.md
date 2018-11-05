@@ -24,9 +24,26 @@ Ces fonctions permettent de lire les caractères des ressources qui viennent d'u
 *fgets($ressource, 50)* lira jusqu'a 50 caractères et toute la ligne si l'on ne donne pas le paramètre.
 *fgetc($ressource , 3)* lira un nombre précis de carctères.
 
+### fseek($ressource , 0), rewind($ressource)
+
+ces fonction servent à contrôler le placement du curseur dans la ressource
+
 
 ### Explode et Implode
 
 La fonction explore incrit dans un tableau une une chaine de caractères avec un séparateur ( à donner en paramètres).
 
 La fonction implode fait l'inverse de explode ( ex: les fichiers .csv peuvent être crées avec  la fonction implode)
+
+### Gérer les dossiers
+
+#### Ouvrir un dossier :
+Pour ouvrir un dossier on utilise la fonction *opendir(/mnt);*
+
+#### Lire les fichiers d'un dossier
+Pour lire les fichier d'un dossier on utilise  la fonction *readdir($dossier)*
+cette fonction renvois les nom des fichiers
+
+#### Changer de répertoire
+Pour changer la position du répèrtoire courrant on utilise la fonction *chdir($dossier)*
+
