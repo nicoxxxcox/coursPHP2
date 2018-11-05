@@ -24,11 +24,30 @@ traitement.php
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <style>
+    
+    html, *{
+        font-family : sans-serif ;
+        box-sizing : border-box;
+    }
+
+    .container{
+        border : 2px dashed;
+        max-width : 960px;
+        margin : 1rem auto;
+        padding : 1rem;
+    }
+    
+    
+    </style>
 </head>
 <body>
 
+<div class="container">
+
 <form action="fichiers_exo2.php" method="post">
- <input type="text" placeholder="Donnez votre numéro à 3 chiffres" name="nb" maxlength="3"   minlength="3" id="">
+ <input type="text" placeholder="Donnez votre numéro à 3 chiffres" name="nb" maxlength="3"   minlength="3" size="45">
  <br/>
  <button type="submit">Essayer</button>
 </form>
@@ -43,9 +62,11 @@ if(isset($_POST['nb'])){
 
     if($gagnant==($_POST['nb']))
     {
-        echo 'VOUS AVEZ GAGNE LE GROS LOT' ;
+        
+        
+       $message = 'VOUS AVEZ GAGNE LE GROS LOT' ;
     
-    } else { echo 'VOUS AVEZ PERDU' ;
+    } else { $message = 'VOUS AVEZ PERDU' ;
     
         }
 
@@ -54,6 +75,10 @@ if(isset($_POST['nb'])){
 
 ?>
 
+
+<div class="message"> <h1><?php echo $message ?> </h1></div>
+
+</div>
     
 </body>
 </html> 

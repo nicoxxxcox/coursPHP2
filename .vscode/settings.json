@@ -1,0 +1,19 @@
+{
+  "deploy": {
+    "packages": [
+      { // déploiement à la sauvegardeS
+        "deployOnSave": true
+      }
+    ],
+
+    "targets": [
+      {
+        "type": "local",
+        "name": "Dossier Wamp",
+        "description": "Dossier de Wamp",
+        //Dossier de déploiement
+        "dir": "C:/wamp64/www/PHP2"
+      }
+    ]
+  }
+}
