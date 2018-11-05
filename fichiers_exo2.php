@@ -38,6 +38,11 @@ traitement.php
         margin : 1rem auto;
         padding : 1rem;
     }
+
+    input{
+        border-radius : 5px;
+        border : 1px solid #cacaca;
+    }
     
     
     </style>
@@ -56,13 +61,14 @@ traitement.php
 
 
 if(isset($_POST['nb'])){
-    
+    // on stocke gagnant.txt en mode r
     $file = fopen("gagnant.txt", "r" );
+    // on lit 3 caractères de gagnant.txt
     $gagnant = fread($file , 3);
 
+    // si tout correspond on affiche le message correspondant
     if($gagnant==($_POST['nb']))
-    {
-        
+    {        
         
        $message = 'VOUS AVEZ GAGNE LE GROS LOT' ;
     
