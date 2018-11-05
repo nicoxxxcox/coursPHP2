@@ -1,6 +1,8 @@
 # Cours php2
 
 
+## GESTION DES FICHIERS
+
 
 ### fopen("fichier.txt" , r)
 
@@ -47,3 +49,19 @@ cette fonction renvois les nom des fichiers
 #### Changer de répertoire
 Pour changer la position du répèrtoire courrant on utilise la fonction *chdir($dossier)*
 
+
+
+## PROGRAMATION ORIENTEE OBJET
+
+### Conventions
+
+Par convention : 
+* Les noms de classer commencent par une majuscule et sont écrit en CamelCase
+* La classe est enregistrée dans un fichier du même nom
+
+### Les portées
+
+les différentes portées de classe :
+ * *public* : Accessible partout de l'exterieur
+ * *private* : Accessible seulement à l'intérieur de la classe ou de l'objet courrant
+ * *protected* : Comme private mais aussi accessible dans une classe/objet hérité
