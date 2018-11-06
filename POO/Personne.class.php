@@ -6,7 +6,7 @@ class Personne {
     private $nom ; 
     private $age ;
 
-    public function __construct($nom , $age)
+    public function __construct($nom , $age=0)
     {
         $this->age = $age;
         $this->nom = $nom;
@@ -41,5 +41,9 @@ class Personne {
     public function getAge()
     {
         return $this->age;
+    }
+
+    public function affInfos(){
+        echo "Les informations sont : <br/> age : " . $this->age . " (0 si non défini) <br> nom :  " . $this->nom ;
     }
 }

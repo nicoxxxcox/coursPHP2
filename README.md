@@ -68,6 +68,37 @@ les différentes portées de classe :
 
  ### Le constructeur
 
-Le constructeur s'écrit `public function __construct(){..}` et permet lors de l'instanciation d'initialiser certaines valeurs dans l'objet.
+Le constructeur s'écrit `public function __construct(){..}` et permet, lors de l'instanciation d'initialiser certaines valeurs dans l'objet.
  
- il ya une fonction qui permet de détruire un objet : `unset($objet)` et lance la fonction magique `__destruct()`, dans l'objet en question
+ il ya une fonction qui permet de détruire un objet : `unset($objet)` et lance la fonction magique `__destruct()`, dans l'objet en question.
+ 
+
+ ### Le polymorphisme en PHP
+
+ Défini le fait pouvoir instancier un objet avec 1,2 ou 3 paramètre dans le `__construct()`.
+ Cela est possible avec l'assignation de valeurs de paramètres par default.
+ ex : `__construct($nom , $age = 0)` => si on ne donne pas `$age` il faudra 0 ;
+
+ ### La methode `__toString()`
+
+ Cette methode doit être implémentée, et DOIT `return` une chaine de caractère et se lance comme `__construct()` pendant l'instanciation.
+
+ ### $this , le tableau associatif
+
+ Dans un objet, la variable `$this` est un tableau associatif avec pour clé le nom de la propriété et pour valeur sa valeur.
+
+ ### `__set` et `__get`
+
+Ces methodes sont des sortes de getter et setter automatiques et permettent de d'avoir acces à des propriétés privates
+ex : 
+`  public function __set($name , $value)
+    {
+        $this->$name = $value;
+    }
+
+    public function __get($name)
+    {
+        return $this->$name;
+    }`
+
+
