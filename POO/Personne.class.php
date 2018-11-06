@@ -2,7 +2,7 @@
 
 class Personne {
 
-
+    
     private $nom ; 
     private $age ;
 
