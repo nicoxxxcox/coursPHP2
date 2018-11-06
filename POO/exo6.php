@@ -53,14 +53,7 @@ include 'PersonneSet.class.php';
         echo $nico->nom;
 
         ?>
-
-        <h2>Je lance le destructeur</h2>
-        <?php
-
-        unset($nico);
-       
-        
-        ?>        
+    
 
 
 

@@ -100,5 +100,8 @@ ex :
     {
         return $this->$name;
     }`
+    Je peux maintenant donc utiliser ces __get et __set :
+    `$nico->nom = "Nicolas";
+     echo $nico->nom;`
 
 
