@@ -133,6 +133,7 @@ public function __get($var) { return $this->$var; }
 
 Aussi , `parent::__contruct()` implante le constructeur du parent chez l'enfant même si ces attributs sont private.
 
+on peut utiliser toutes les méthodes parents avec `parent::maMethode()`.
 
 
 
