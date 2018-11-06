@@ -65,3 +65,9 @@ les différentes portées de classe :
  * *`public`* : Accessible partout de l'exterieur
  * *`private`* : Accessible seulement à l'intérieur de la classe ou de l'objet courrant
  * *`protected`* : Comme private mais aussi accessible dans une classe/objet hérité
+
+ ### Le constructeur
+
+Le constructeur s'écrit `public function __construct(){..}` et permet lors de l'instanciation d'initialiser certaines valeurs dans l'objet.
+ 
+ il ya une fonction qui permet de détruire un objet : `unset($objet)` et lance la fonction magique `__destruct()`, dans l'objet en question

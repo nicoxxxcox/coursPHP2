@@ -41,7 +41,7 @@ include 'Personne.class.php';
 
     <div class="container">
         
-        <form action="exo1.php" method="post">
+        <form action="exo2.php" method="post">
             
             <label for="name">Votre nom</label>
             <br>
@@ -64,22 +64,14 @@ include 'Personne.class.php';
         if(isset($_POST['name']) && isset($_POST['age'])){
             
             // on instancie l'objet perso
-            $perso = new Personne();
+            $perso = new Personne($_POST['name'], $_POST['age']);
 
-            $perso->setNom($_POST['name']);
+            
             $nom = $perso->getNom();
 
-            
-                $perso->setAge($_POST['age']);
-                
-                if($perso->getAge()){
-                    $age = $perso->getAge();
+            $age = $perso->getAge();
 
-                echo "<h2>Bonjour <u>" . $nom . "</u>, ton age est de <u>". $age . "</u> ans</h2>";
-                }
-                
-
-            
+            echo "<h2>Bonjour <u>" . $nom . "</u>, ton age est de <u>". $age . "</u> ans</h2>";   
         
         }
 
