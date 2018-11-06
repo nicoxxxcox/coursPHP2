@@ -31,7 +31,7 @@ Ces fonctions permettent de lire les caractères des ressources qui viennent d'u
 ces fonction servent à contrôler le placement du curseur dans la ressource
 
 
-### Explode et Implode
+### Explode($ressource) et Implode($tableau)
 
 La fonction explore incrit dans un tableau une une chaine de caractères avec un séparateur ( à donner en paramètres).
 
