@@ -1,18 +1,22 @@
 <?php
 
-class PersonneSet {
+class PersonneSal {
 
     
-    private $nom ; 
-    private $prenom ;
-    private $adresse ;
+    protected $nom ; 
+    protected $prenom ;   
 
    
+    public function __construct($nom , $prenom){
+        $this->nom = $nom;
+        $this->prenom = $prenom ; 
+
+    }
+
     public function __set($name , $value)
     {
         
-        
-        $this->$name = strToUpper($value);
+        $this->$name = $value;
     }
 
     public function __get($name)

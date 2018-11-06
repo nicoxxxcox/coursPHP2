@@ -1,11 +1,19 @@
 <?php
 
-class PersonneSet {
+include "PersonneSal.class.php";
+
+class Salarie extends PersonneSal {
 
     
-    private $nom ; 
-    private $prenom ;
-    private $adresse ;
+   
+    private $salaire ;
+
+    public function __construct($nom , $prenom , $salaire)
+    {
+        $this->nom = $nom;
+        $this->prenom = $prenom ; 
+        $this->salaire = $salaire ;
+    }   
 
    
     public function __set($name , $value)

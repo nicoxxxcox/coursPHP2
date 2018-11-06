@@ -91,7 +91,8 @@ Le constructeur s'écrit `public function __construct(){..}` et permet, lors de 
 
 Ces methodes sont des sortes de getter et setter automatiques et permettent de d'avoir acces à des propriétés privates
 ex : 
-```php  public function __set($name , $value)
+`  
+public function __set($name , $value)
     {
         $this->$name = $value;
     }
@@ -100,12 +101,18 @@ ex :
     {
         return $this->$name;
     }
+    `
     
-    ```
-Je peux maintenant donc utiliser ces __get et __set :
-    ```php
+Je peux maintenant donc utiliser ces __get et __set
+    `
     $nico->nom = "Nicolas";
      echo $nico->nom;
-     ```
+     `
+
+### L'héritages des classes
+
+C'est avec le mot clé *extends* que l'on spécifie l'héritage.
+
+
 
 
