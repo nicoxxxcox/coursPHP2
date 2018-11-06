@@ -104,18 +104,15 @@ public function __set($name , $value)
     `
     
 Je peux maintenant donc utiliser ces __get et __set
-    `
-    $nico->nom = "Nicolas";
-     echo $nico->nom;
-     `
+    ` $nico->nom = "Nicolas";
+     echo $nico->nom; `
 
 ### L'héritages des classes
 
 C'est avec le mot clé *extends* que l'on spécifie l'héritage.
 `Class Enfant extends Parent{...}`
 
-`
-<?php
+` <?php
 // 
 ---
 Salarie.php
@@ -132,8 +129,9 @@ $this->salaire = $salaire;
 public function __set($var, $valeur) { $this->$var = $valeur; }
 public function __get($var) { return $this->$var; }
 }
-?>
-`
+?> `
+
+Aussi , `parent::__contruct()` implante le constructeur du parent chez l'enfant même si ces attributs sont private.
 
 
 
