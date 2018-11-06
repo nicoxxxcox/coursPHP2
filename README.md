@@ -4,7 +4,7 @@
 ## GESTION DES FICHIERS
 
 
-### fopen("fichier.txt" , r)
+### `fopen("fichier.txt" , r)`
 
 La fonction fopen ouvre un fichier stocké avec différents modes :
 * 'r' 	Ouvre en lecture seule, et place le pointeur de fichier au début du fichier.
@@ -19,19 +19,19 @@ La fonction fopen ouvre un fichier stocké avec différents modes :
 * 'c+' 	Ouvre le fichier pour lecture et écriture, le comportement est le même que pour le mode 'c'.
 * 'e' 	Défini l'indicateur close-on-exec sur le descripteur de fichier ouvert. Disponible uniquement en PHP compilé sur les systèmes conforme POSIX.1-2008.
 
-### fgetc($ressource, 50), fgets($ressource, 50) , fread($ressource, 50)
+### `fgetc($ressource, 50)`, `fgets($ressource, 50)` , `fread($ressource, 50)`
 
 Ces fonctions permettent de lire les caractères des ressources qui viennent d'un fopen
 *fread($ressource , 50)* lira les 50 premières caractères même s'il y en à que 30 , le reste sera des espaces.
 *fgets($ressource, 50)* lira jusqu'a 50 caractères et toute la ligne si l'on ne donne pas le paramètre.
 *fgetc($ressource , 3)* lira un nombre précis de carctères.
 
-### fseek($ressource , 0), rewind($ressource)
+### `fseek($ressource , 0)`, `rewind($ressource)`
 
 ces fonction servent à contrôler le placement du curseur dans la ressource
 
 
-### Explode($ressource) et Implode($tableau)
+### `explode($ressource)` et `implode($tableau)`
 
 La fonction explore incrit dans un tableau une une chaine de caractères avec un séparateur ( à donner en paramètres).
 
@@ -40,14 +40,14 @@ La fonction implode fait l'inverse de explode ( ex: les fichiers .csv peuvent ê
 ### Gérer les dossiers
 
 #### Ouvrir un dossier :
-Pour ouvrir un dossier on utilise la fonction *opendir(/mnt);*
+Pour ouvrir un dossier on utilise la fonction *`opendir(/mnt);`*
 
 #### Lire les fichiers d'un dossier
-Pour lire les fichier d'un dossier on utilise  la fonction *readdir($dossier)*
+Pour lire les fichier d'un dossier on utilise  la fonction *`readdir($dossier)`*
 cette fonction renvois les nom des fichiers
 
 #### Changer de répertoire
-Pour changer la position du répèrtoire courrant on utilise la fonction *chdir($dossier)*
+Pour changer la position du répèrtoire courrant on utilise la fonction *`chdir($dossier)`*
 
 
 
@@ -62,6 +62,6 @@ Par convention :
 ### Les portées
 
 les différentes portées de classe :
- * *public* : Accessible partout de l'exterieur
- * *private* : Accessible seulement à l'intérieur de la classe ou de l'objet courrant
- * *protected* : Comme private mais aussi accessible dans une classe/objet hérité
+ * *`public`* : Accessible partout de l'exterieur
+ * *`private`* : Accessible seulement à l'intérieur de la classe ou de l'objet courrant
+ * *`protected`* : Comme private mais aussi accessible dans une classe/objet hérité
