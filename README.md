@@ -91,7 +91,7 @@ Le constructeur s'écrit `public function __construct(){..}` et permet, lors de 
 
 Ces methodes sont des sortes de getter et setter automatiques et permettent de d'avoir acces à des propriétés privates
 ex : 
-`  
+```php 
 public function __set($name , $value)
     {
         $this->$name = $value;
@@ -101,7 +101,7 @@ public function __set($name , $value)
     {
         return $this->$name;
     }
-    `
+```
     
 Je peux maintenant donc utiliser ces __get et __set
     ` $nico->nom = "Nicolas";
@@ -112,7 +112,8 @@ Je peux maintenant donc utiliser ces __get et __set
 C'est avec le mot clé *extends* que l'on spécifie l'héritage.
 `Class Enfant extends Parent{...}`
 
-` <?php
+```php 
+<?phps
 // 
 ---
 Salarie.php
@@ -129,7 +130,8 @@ $this->salaire = $salaire;
 public function __set($var, $valeur) { $this->$var = $valeur; }
 public function __get($var) { return $this->$var; }
 }
-?> `
+?> 
+```
 
 Aussi , `parent::__contruct()` implante le constructeur du parent chez l'enfant même si ces attributs sont private.
 
