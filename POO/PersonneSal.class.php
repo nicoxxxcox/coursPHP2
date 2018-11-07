@@ -4,7 +4,9 @@ class PersonneSal {
 
     
     protected $nom ; 
-    protected $prenom ;   
+    protected $prenom ;  
+    
+   const PII = 3.14159265359;
 
    
     public function __construct($nom , $prenom){
