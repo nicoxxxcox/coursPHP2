@@ -7,6 +7,13 @@ class PersonneSal {
     protected $prenom ;  
     
    const PII = 3.14159265359;
+   
+   private static $solde = "1000 €";
+
+   public static function getSoldeStatic()
+   {
+       return self::$solde; 
+   }
 
    
     public function __construct($nom , $prenom){

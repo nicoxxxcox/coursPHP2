@@ -53,23 +53,7 @@ Pour changer la position du répèrtoire courrant on utilise la fonction **`chdi
 
 ## PROGRAMATION ORIENTEE OBJET
 
-### Représenter une classe
 
-+---------------------+
-|  NomDeClasse        |
-+---------------------+
-|                     |
-|  +atributPublic     |
-|  -atributPrive      |
-|  #atributprotected  |
-|                     |
-|  +methodePublique() |
-|                     |
-|  -methodePrive()    |
-|                     |
-|  #methodeprotected  |
-|                     |
-+---------------------+
 
 
 ### Conventions
@@ -162,5 +146,28 @@ on peut utiliser toutes les méthodes parents avec `parent::maMethode()`.
 
 s'écrit : `const PII = 3.14;// dans la classe constante`
 et on y accède de l'exterieur **sans avoir à instancier l'objet** de cette façon :
-`contante::PII;`
+`constante::PII;`
 
+### Les attributs de classes
+
+S'écrit, `public static $maVariableStatique`.
+y accède de l'exterieur **sans avoir à instancier l'objet** de cette façon : 
+`constante::$maVariableStatique`.
+
+#### Constante de classe
+
+S'écrit `const NOM = "Mon nom" ;`
+y accède de l'exterieur **sans avoir à instancier l'objet** de cette façon : 
+`constante::PII;`
+
+#### Attribut statique
+
+S'écrit `public static ATT = "Mon nom" ;`
+y accède de l'exterieur **sans avoir à instancier l'objet** de cette façon : 
+`constante::$ATT;`
+
+#### Methode statique
+
+S'écrit `public static function GETATT() { return self::ATT;}`
+y accède de l'exterieur **sans avoir à instancier l'objet** de cette façon : 
+`constante::GETATT();`
