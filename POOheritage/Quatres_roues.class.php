@@ -7,9 +7,16 @@ class Quatres_roues extends Vehicule
 {
     protected $nombre_porte;
 
-    static public function ajouter_personne($poids_personne)
+    public function __construct($nombre_porte)
     {
-        parent::poids =  ($poids_personne + parent::poids) ;
+        
+        $this->nombre_porte = $nombre_porte;
+    }
+
+    
+    public function ajouter_personne($poids_personne)
+    {
+        $this->poids += $poids_personne;
     
     }
 

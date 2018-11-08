@@ -17,6 +17,17 @@ class Voiture extends Quatres_roues
         return $this->$nom;
     }
 
+    
+    public function ajouter_personne($poids_personne)
+    {
+        $this->poids += $poids_personne;
+        if($this->poids >= 1500 && $this->nombre_pneu_neige == 2 && $this->nombre_pneu_neige != 4){
+            echo "Attention, veuillez mettre 4 pneus neige";
+        }
+    
+    }
+   
+
     public function ajouter_pneu_neige($nombre)
     {
         $this->nombre_pneu_neige += $nombre;

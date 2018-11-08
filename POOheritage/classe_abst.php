@@ -6,6 +6,7 @@ abstract class Compte
     public $prenom;
     public $solde;
 
+
     public function __construct($nom , $prenom , $solde)
     {
         $this->nom  = $nom ;
@@ -36,12 +37,12 @@ class Courant extends Compte
 
     public function credit($montant)
     {
-        return parent::$solde += ($montant * 1);
+        return $this->$solde += ($montant * 1);
     }
 
     public function debit($montant)
     {
-        return parent::$solde -= ($montant);
+        return $this->$solde -= ($montant);
     }
 }
 
@@ -50,14 +51,17 @@ class Epargne extends Compte
 
     public function credit($montant)
     {
-        return parent::$solde += ($montant * 1.2);
+        return $this->$solde += ($montant * 1.2);
     }
 
     public function debit($montant)
     {
-        return parent::$solde -= ($montant);
+        return $this->$solde -= ($montant);
     }
 
 }
 
 $courant = new Courant("Nicolas" , "Grissi", 1200 , "Dev");
+
+echo "Bonjour ". $courant->nom . " " . $courant->prenom . " Votre solde est de " . $courant->solde . " et votre emplois est " . $courant->emploi;
+

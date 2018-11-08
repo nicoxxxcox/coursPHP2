@@ -7,9 +7,9 @@ class Deux_roues extends Vehicule
     protected $cylindree;
 
 
-    static public function ajouter_personne($poids_personne)
+    public function ajouter_personne($poids_personne)
     {
-        self::poids += ( $poids_personne + 2 );
+        $this->poids += ( $poids_personne + 2 );
     
     }
 

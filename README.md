@@ -190,6 +190,7 @@ abstract class Compte
     public $prenom;
     public $solde;
 
+    //on déclare notre constructeur parent
     public function __construct($nom , $prenom , $solde)
     {
         $this->nom  = $nom ;
@@ -198,11 +199,8 @@ abstract class Compte
     }
     
     //on oblige la classe enfant à définir la fonction
-    abstract public function credit($montant);
-    
-    
+    abstract public function credit($montant);   
     abstract public function debit($montant);
-    
 
 
 }
@@ -212,7 +210,7 @@ class Courant extends Compte
 
     public $emploi;
 
-    //onhérite du constructeur parent en y ajoutant un paramètre
+    //onhérite du constructeur parent en y ajoutant un paramètre is $emploi
     public function __construct($nom , $prenom , $solde , $emploi)
     {   
         $this->emploi = $emploi ;
@@ -233,4 +231,10 @@ class Courant extends Compte
 
 ```
 
+### Les classes final
+
+**Les classes final ne peuvent pas êtres héritées**
+
+
+## MODEL VUE CONTROLER MVC
 

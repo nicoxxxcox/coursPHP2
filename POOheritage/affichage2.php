@@ -48,6 +48,24 @@
 
 <?php
 
+$moto = new Deux_roues("rouge" , 150);
+$moto->ajouter_personne(70);
+$moto->couleur= "vert" ;
+
+Vehicule::afficher_attribut($moto);
+
+$moto->couleur= "vert" ;
+$moto->cylindree= "1000" ;
+Vehicule::afficher_attribut($moto);
+
+$camion = new Camion("blanc" , 6000);
+$camion->ajouter_personne(84);
+$camion->repeindre("bleu");
+$camion->nb_portes = 2 ;
+Vehicule::afficher_attribut($camion);
+
+$voiture = new Voiture("violet" , 1400 , 5);
+
     
 
 ?>
