@@ -166,8 +166,71 @@ S'écrit `public static ATT = "Mon nom" ;`
 y accède de l'exterieur **sans avoir à instancier l'objet** de cette façon : 
 `constante::$ATT;`
 
+bn : Il est possible par exemple d'incrémenter un atribut statique avec le constructeur à chaques fois qu'un objet est instancié.
+
 #### Methode statique
 
 S'écrit `public static function GETATT() { return self::ATT;}`
 y accède de l'exterieur **sans avoir à instancier l'objet** de cette façon : 
 `constante::GETATT();`
+
+### Les classes dérivées
+
+
+### Les classes abstraites
+
+C'est une classe mère **qui ne peut être instanciée, juste héritée ** .
+On utilise pour la définir le mor clef **abstract**
+
+```php
+
+abstract class Compte
+{
+    public $nom;
+    public $prenom;
+    public $solde;
+
+    public function __construct($nom , $prenom , $solde)
+    {
+        $this->nom  = $nom ;
+        $this->prenom = $prenom ;
+        $this->solde = $solde ;
+    }
+    
+    //on oblige la classe enfant à définir la fonction
+    abstract public function credit($montant);
+    
+    
+    abstract public function debit($montant);
+    
+
+
+}
+
+class Courant extends Compte
+{
+
+    public $emploi;
+
+    //onhérite du constructeur parent en y ajoutant un paramètre
+    public function __construct($nom , $prenom , $solde , $emploi)
+    {   
+        $this->emploi = $emploi ;
+        parent::__construct($nom , $prenom , $solde);
+        
+    }
+
+    public function credit($montant)
+    {
+        return parent::$solde += ($montant * 1);
+    }
+
+    public function debit($montant)
+    {
+        return parent::$solde -= ($montant);
+    }
+}
+
+```
+
+
