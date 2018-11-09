@@ -43,7 +43,7 @@ foreach ($faq as $key => $valeur) {
 <div class="col-md-4 col-12 my-2">
     <h3 class="font-weigth-bold text-primary"> Ajoutez vos Questions/Reponses </h3>
     <?php
-require 'add_question.php';
+        require 'add_question.php';
 
     ?>
     </div> 
