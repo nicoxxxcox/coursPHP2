@@ -238,3 +238,11 @@ class Courant extends Compte
 
 ## MODEL VUE CONTROLER MVC
 
+**La partie Modèle**
+d'une architecture MVC encapsule la logique métier («business logic») ainsi que l'accès aux données.  Il peut s'agir d'un ensemble de fonctions (Modèle procédural) ou de classes (Modèle orienté objet).
+
+**La partie Vue**
+s'occupe des interactions avec l'utilisateur: présentation, saisie et validation des données.
+
+**La partie Contrôleur**
+gère la dynamique de l'application. Elle fait le lien entre l'utilisateur et le reste de l'application.
